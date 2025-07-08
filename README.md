@@ -1,1 +1,0 @@
-# myshop-diary-privacy
