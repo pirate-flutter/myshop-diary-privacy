@@ -117,12 +117,12 @@ https://myshop-diary-privacy.web.app/
 
 각 문서에서 안내하는 연락처:
 
-- **일반 문의**: support@myshop-diary.com
-- **개인정보 관련**: privacy@myshop-diary.com
-- **기능 제안**: feedback@myshop-diary.com
-- **버그 신고**: bugs@myshop-diary.com
-- **보안 취약점**: security@myshop-diary.com
-- **비즈니스 문의**: business@myshop-diary.com
+- **일반 문의**: myshopdiary.cs@gmail.com
+- **개인정보 관련**: myshopdiary.cs@gmail.com
+- **기능 제안**: myshopdiary.cs@gmail.com
+- **버그 신고**: myshopdiary.cs@gmail.com
+- **보안 취약점**: myshopdiary.cs@gmail.com
+- **비즈니스 문의**: myshopdiary.cs@gmail.com
 
 ## ⚖️ 법적 준수사항
 
