@@ -2,25 +2,264 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>MyShop Diary 계정 삭제</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyShop Diary 계정 삭제 안내</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 { color: #2c3e50; border-bottom: 3px solid #e74c3c; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 2em; border-left: 4px solid #e74c3c; padding-left: 10px; }
+        h3 { color: #555; margin-top: 1.5em; }
+        .warning { background-color: #ffeaa7; border: 2px solid #fdcb6e; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        .info { background-color: #dff0d8; border: 1px solid #d6e9c6; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .contact-info { background-color: #e8f5e8; padding: 15px; border-radius: 5px; }
+        .step { background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin: 15px 0; }
+        .update-date { text-align: right; color: #666; font-style: italic; margin-top: 2em; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; font-weight: bold; }
+        ol.method { counter-reset: method; }
+        ol.method > li { counter-increment: method; margin-bottom: 20px; }
+        ol.method > li::marker { content: "방법 " counter(method) ": "; font-weight: bold; color: #e74c3c; }
+    </style>
 </head>
 <body>
-    <h1>MyShop Diary 계정 삭제</h1>
+    <h1>MyShop Diary 계정 삭제 안내</h1>
+    
+    <div class="warning">
+        <strong>⚠️ 중요한 안내사항</strong><br>
+        계정을 삭제하면 모든 데이터가 영구적으로 삭제되며 복구할 수 없습니다. 삭제 전에 중요한 데이터를 백업해 주세요.
+    </div>
 
-    <h2>계정 삭제 요청 방법</h2>
-    <p>1. 아래 이메일로 계정 삭제 요청</p>
-    <p>2. 이메일 주소: pirate.flutter@gmail.com</p>
-    <p>3. 제목: "MyShop Diary 계정 삭제 요청"</p>
-    <p>4. 내용: 등록된 이메일 주소 명시</p>
+    <h2>1. 계정 삭제 방법</h2>
+    
+    <ol class="method">
+        <li><strong>앱 내에서 직접 삭제 (권장)</strong>
+            <div class="step">
+                <h4>단계별 안내:</h4>
+                <ol>
+                    <li>MyShop Diary 앱 실행</li>
+                    <li>하단 메뉴에서 '설정' 탭 선택</li>
+                    <li>'계정 정보' 섹션에서 '계정 관리' 선택</li>
+                    <li>'계정 삭제' 버튼 선택</li>
+                    <li>삭제 사유 선택 및 확인</li>
+                    <li>최종 확인 후 '계정 삭제' 실행</li>
+                </ol>
+                <div class="info">
+                    <strong>처리 시간:</strong> 즉시 처리 (Firebase Authentication에서 계정 삭제)
+                </div>
+            </div>
+        </li>
+        
+        <li><strong>이메일을 통한 삭제 요청</strong>
+            <div class="step">
+                <h4>이메일 발송 정보:</h4>
+                <ul>
+                    <li><strong>받는 사람:</strong> privacy@myshop-diary.com</li>
+                    <li><strong>제목:</strong> [계정삭제] MyShop Diary 계정 삭제 요청</li>
+                    <li><strong>내용 포함사항:</strong>
+                        <ul>
+                            <li>등록된 이메일 주소</li>
+                            <li>삭제 요청 사유</li>
+                            <li>본인 확인을 위한 추가 정보 (필요시)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="info">
+                    <strong>처리 시간:</strong> 영업일 기준 3일 이내 처리 완료
+                </div>
+            </div>
+        </li>
+        
+        <li><strong>고객 지원 센터 문의</strong>
+            <div class="step">
+                <h4>문의 방법:</h4>
+                <ul>
+                    <li>앱 내 '고객 지원' 메뉴 이용</li>
+                    <li>이메일: support@myshop-diary.com</li>
+                    <li>문의 시 본인 확인 절차 필요</li>
+                </ul>
+                <div class="info">
+                    <strong>처리 시간:</strong> 영업일 기준 1-2일 이내 안내 후 처리
+                </div>
+            </div>
+        </li>
+    </ol>
 
-    <h2>삭제되는 데이터</h2>
-    <p>- 모든 개인정보 및 앱 사용 데이터</p>
-    <p>- 고객 정보, 예약 정보, 서비스 정보</p>
+    <h2>2. 삭제되는 데이터</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>데이터 유형</th>
+                <th>삭제 내용</th>
+                <th>삭제 시점</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>계정 정보</strong></td>
+                <td>이메일 주소, 로그인 정보</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>사업자 정보</strong></td>
+                <td>사업체명, 사업자명, 주소, 전화번호, 사업자등록번호 등</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>고객 데이터</strong></td>
+                <td>고객명, 연락처, 생년월일, 메모 등 모든 고객 정보</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>예약 데이터</strong></td>
+                <td>모든 예약 내역, 예약 상태, 결제 정보</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>매출 데이터</strong></td>
+                <td>매출 통계, 결제 내역, 수익 분석 데이터</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>서비스 데이터</strong></td>
+                <td>등록된 서비스, 가격, 카테고리 정보</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>멤버십 데이터</strong></td>
+                <td>멤버십 정보, 구매 내역, 사용 내역</td>
+                <td>즉시</td>
+            </tr>
+            <tr>
+                <td><strong>앱 사용 기록</strong></td>
+                <td>로그인 기록, 앱 사용 패턴, 성능 로그</td>
+                <td>즉시</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <h2>처리 기간</h2>
-    <p>요청 후 7일 이내 완전 삭제</p>
+    <h2>3. 삭제 불가능한 데이터</h2>
+    
+    <div class="info">
+        <h4>법적 보관 의무가 있는 데이터</h4>
+        <p>다음 데이터는 관련 법령에 따라 일정 기간 보관됩니다:</p>
+        <ul>
+            <li><strong>세금계산서 관련 기록:</strong> 5년 (부가가치세법)</li>
+            <li><strong>전자상거래 기록:</strong> 5년 (전자상거래법)</li>
+            <li><strong>부정이용 기록:</strong> 1년 (개인정보보호법)</li>
+            <li><strong>서비스 이용 기록:</strong> 3개월 (통신비밀보호법)</li>
+        </ul>
+        <p><strong>보관 방식:</strong> 개인식별이 불가능한 형태로 암호화하여 별도 저장</p>
+    </div>
 
-    <h2>부분 데이터 삭제</h2>
-    <p>앱 내에서 개별 데이터 삭제 가능</p>
+    <h2>4. 계정 삭제 전 확인사항</h2>
+    
+    <div class="warning">
+        <h4>삭제 전 반드시 확인하세요!</h4>
+        <ul>
+            <li><strong>데이터 백업:</strong> 중요한 고객 정보, 예약 내역, 매출 데이터 백업</li>
+            <li><strong>미처리 예약:</strong> 진행 중인 예약이 있는지 확인</li>
+            <li><strong>정산 완료:</strong> 미정산 금액이 있는지 확인</li>
+            <li><strong>멤버십 처리:</strong> 고객 멤버십 잔여 횟수 처리 여부 확인</li>
+            <li><strong>복구 불가:</strong> 삭제 후에는 어떤 데이터도 복구할 수 없음을 인지</li>
+        </ul>
+    </div>
+
+    <h2>5. 부분 데이터 삭제</h2>
+    
+    <p>전체 계정 삭제가 아닌 부분적인 데이터만 삭제하고 싶은 경우:</p>
+    
+    <h3>5.1 앱 내에서 직접 삭제 가능한 데이터</h3>
+    <ul>
+        <li>개별 고객 정보</li>
+        <li>특정 예약 내역</li>
+        <li>서비스 항목</li>
+        <li>멤버십 정보</li>
+    </ul>
+
+    <h3>5.2 삭제 방법</h3>
+    <ol>
+        <li>해당 데이터가 있는 화면으로 이동</li>
+        <li>삭제하고 싶은 항목 선택</li>
+        <li>'삭제' 버튼 선택</li>
+        <li>삭제 확인</li>
+    </ol>
+
+    <h2>6. 계정 삭제 후 안내</h2>
+    
+    <h3>6.1 삭제 완료 통지</h3>
+    <ul>
+        <li>계정 삭제 완료 시 등록된 이메일로 확인 메일 발송</li>
+        <li>Firebase Authentication에서 계정 정보 즉시 삭제</li>
+        <li>Cloud Firestore의 모든 개인 데이터 즉시 삭제</li>
+    </ul>
+
+    <h3>6.2 재가입 안내</h3>
+    <ul>
+        <li>동일한 이메일로 재가입 가능</li>
+        <li>기존 데이터는 복구되지 않음</li>
+        <li>새로운 계정으로 처음부터 시작</li>
+    </ul>
+
+    <h2>7. 삭제 철회 및 유예</h2>
+    
+    <div class="info">
+        <strong>삭제 유예 기간</strong><br>
+        이메일로 삭제 요청한 경우, 처리 전까지는 철회 가능합니다. 단, 앱 내에서 직접 삭제한 경우에는 즉시 처리되어 철회가 불가능합니다.
+    </div>
+
+    <h2>8. 개인정보 보호책임자</h2>
+    
+    <div class="contact-info">
+        <h4>문의 및 신고</h4>
+        <p>
+            <strong>개인정보 보호책임자:</strong> MyShop 개발팀<br>
+            <strong>이메일:</strong> privacy@myshop-diary.com<br>
+            <strong>고객지원:</strong> support@myshop-diary.com<br>
+        </p>
+        
+        <h4>외부 신고센터</h4>
+        <p>
+            <strong>개인정보 침해신고센터:</strong> privacy.go.kr (국번없이 182)<br>
+            <strong>개인정보 분쟁조정위원회:</strong> kopico.go.kr (국번없이 1833-6972)
+        </p>
+    </div>
+
+    <h2>9. 자주 묻는 질문 (FAQ)</h2>
+    
+    <h3>Q1. 계정 삭제 후 복구가 가능한가요?</h3>
+    <p><strong>A:</strong> 아니요. 계정 삭제 후에는 모든 데이터가 영구적으로 삭제되어 복구가 불가능합니다.</p>
+
+    <h3>Q2. 일부 데이터만 삭제할 수 있나요?</h3>
+    <p><strong>A:</strong> 네. 앱 내에서 고객, 예약, 서비스 등의 개별 데이터를 삭제할 수 있습니다.</p>
+
+    <h3>Q3. 삭제 처리에 얼마나 걸리나요?</h3>
+    <p><strong>A:</strong> 앱 내 삭제는 즉시, 이메일 요청은 영업일 기준 3일 이내 처리됩니다.</p>
+
+    <h3>Q4. 동일한 이메일로 재가입이 가능한가요?</h3>
+    <p><strong>A:</strong> 네. 계정 삭제 후 동일한 이메일로 재가입이 가능하지만, 기존 데이터는 복구되지 않습니다.</p>
+
+    <h3>Q5. 법정 보관 의무 데이터는 언제 삭제되나요?</h3>
+    <p><strong>A:</strong> 관련 법령에서 정한 보관 기간이 만료되면 자동으로 삭제됩니다.</p>
+
+    <div class="update-date">
+        <strong>최종 수정일:</strong> 2025년 1월 23일<br>
+        <strong>문의:</strong> privacy@myshop-diary.com
+    </div>
+
+    <p style="text-align: center; margin-top: 40px;">
+        <a href="index.html">홈으로 돌아가기</a> | 
+        <a href="privacy-policy.html">개인정보처리방침</a> | 
+        <a href="support.html">고객지원</a>
+    </p>
+
 </body>
 </html>
