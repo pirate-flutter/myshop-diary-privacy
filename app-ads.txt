@@ -1,0 +1,8 @@
+# app-ads.txt for 마이샵 다이어리 (MyShop Diary)
+# https://iabtechlab.com/app-ads-txt/
+
+# Google AdMob
+google.com, pub-6736437904767269, DIRECT, f08c47fec0942fa0
+
+# Additional authorized sellers can be added here
+# Format: <advertising_system_domain>, <publisher_account_id>, <account_type>, <certification_authority_id>
